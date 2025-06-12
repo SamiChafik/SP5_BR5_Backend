@@ -8,6 +8,6 @@ import org.mapstruct.ReportingPolicy;
 
 @Mapper(componentModel = "spring", unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface PanneMapper {
-    PanneDto toUserDto(Panne panne);
-    Panne toUserEntity(PanneDto panneDto);
+    PanneDto toDto(Panne panne);
+    Panne toEntity(PanneDto panneDto);
 }
