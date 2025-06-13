@@ -3,6 +3,7 @@ package com.example.itsupport.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -12,7 +13,7 @@ public class Panne {
     @Column(nullable = false)
     private Long id;
     private Long equipment_id;
-    private Date date;
+    private LocalDate date;
 
     public Long getId() {
         return id;
@@ -30,15 +31,15 @@ public class Panne {
         this.equipment_id = equipment_id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public Panne(Long id, Long equipment_id, Date date) {
+    public Panne(Long id, Long equipment_id, LocalDate date) {
         this.id = id;
         this.equipment_id = equipment_id;
         this.date = date;

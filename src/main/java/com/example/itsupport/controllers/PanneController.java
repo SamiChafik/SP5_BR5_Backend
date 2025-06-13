@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("panne")
+@RequestMapping("/panne")
 public class PanneController {
 
     @Autowired
@@ -19,7 +19,7 @@ public class PanneController {
         this.panneService = panneService;
     }
 
-    @PostMapping("/")
+    @PostMapping
     public PanneDto addPanne(@RequestBody PanneDto panneDto){
         return panneService.savePanne(panneDto);
     }

@@ -1,14 +1,15 @@
 package com.example.itsupport.dto;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class PanneDto {
 
     private Long id;
     private Long equipment_id;
-    private Date date;
+    private LocalDate date;
 
-    public PanneDto(Long id, Long equipment_id, Date date) {
+    public PanneDto(Long id, Long equipment_id, LocalDate date) {
         this.id = id;
         this.equipment_id = equipment_id;
         this.date = date;
@@ -33,11 +34,11 @@ public class PanneDto {
         this.equipment_id = equipment_id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }
