@@ -29,13 +29,19 @@ public class PanneController {
         return panneService.getAllPanne();
     }
 
-    @PutMapping
-    public PanneDto modifierPanne(Long id, PanneDto panneDto){
+    @PutMapping("/{id}")
+    public PanneDto modifierPanne(@PathVariable Long id, PanneDto panneDto){
         return panneService.modifierPanne(panneDto, id);
     }
 
-    @DeleteMapping
-    public void deletePanne(Long id){
+    @DeleteMapping("/{id}")
+    public void deletePanne(@PathVariable Long id){
         panneService.deletePanne(id);
+    }
+
+    @GetMapping("/{id}")
+
+    public PanneDto getPanneById(@PathVariable Long id){
+       return panneService.getPanneById(id);
     }
 }

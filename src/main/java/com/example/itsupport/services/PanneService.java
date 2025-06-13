@@ -43,4 +43,9 @@ public class PanneService {
     public void deletePanne(Long id){
         panneRepository.deleteById(id);
     }
+
+    public PanneDto getPanneById(Long id) {
+        return panneRepository.findById(id).map(panneMapper::toDto)
+                .orElseThrow(()-> new RuntimeException("Client not found" + id));
+    }
 }
